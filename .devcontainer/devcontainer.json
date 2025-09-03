@@ -1,36 +1,22 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/universal
 {
-  "name": "All-in-One Development Environment",
-  
-  // အပေါ်မှာတည်ဆောက်ခဲ့တဲ့ Dockerfile ကို အသုံးပြုဖို့ ဒီနေရာမှာ ညွှန်ပြပေးပါတယ်
-  "build": {
-    "dockerfile": "Dockerfile",
-    "context": ".."
-  },
+	"name": "Default Linux Universal",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/universal:2-linux"
 
-  // VS Code မှာ အလိုအလျောက်သွင်းပေးမယ့် Extension များ
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        // General & Web Development
-        "esbenp.prettier-vscode",         // Code formatter
-        "ritwickdey.liveserver",          // Live preview for HTML/CSS
-        "dbaeumer.vscode-eslint",         // JavaScript linter
-        "ms-vscode.html-css",             // HTML & CSS support
-        "github.copilot",                 // AI code completion (optional)
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
 
-        // Python
-        "ms-python.python",               // Python language support
-        "ms-python.vscode-pylance",       // Python IntelliSense
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
 
-        // C, C++
-        "ms-vscode.cpptools-extension-pack", // C/C++ extension pack
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "uname -a",
 
-        // C#
-        "ms-dotnettools.csdevkit"         // Modern C# extension pack
-      ]
-    }
-  },
+	// Configure tool-specific properties.
+	// "customizations": {},
 
-  // Forward a port for live-server when it's running.
-  "forwardPorts": [5500]
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
 }
