@@ -1,0 +1,36 @@
+{
+  "name": "All-in-One Development Environment",
+  
+  // အပေါ်မှာတည်ဆောက်ခဲ့တဲ့ Dockerfile ကို အသုံးပြုဖို့ ဒီနေရာမှာ ညွှန်ပြပေးပါတယ်
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+
+  // VS Code မှာ အလိုအလျောက်သွင်းပေးမယ့် Extension များ
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // General & Web Development
+        "esbenp.prettier-vscode",         // Code formatter
+        "ritwickdey.liveserver",          // Live preview for HTML/CSS
+        "dbaeumer.vscode-eslint",         // JavaScript linter
+        "ms-vscode.html-css",             // HTML & CSS support
+        "github.copilot",                 // AI code completion (optional)
+
+        // Python
+        "ms-python.python",               // Python language support
+        "ms-python.vscode-pylance",       // Python IntelliSense
+
+        // C, C++
+        "ms-vscode.cpptools-extension-pack", // C/C++ extension pack
+
+        // C#
+        "ms-dotnettools.csdevkit"         // Modern C# extension pack
+      ]
+    }
+  },
+
+  // Forward a port for live-server when it's running.
+  "forwardPorts": [5500]
+}
